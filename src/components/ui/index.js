@@ -1,0 +1,6 @@
+export { default as Cards } from './Cards/Cards'
+export { default as Card } from './Card/Card'
+export { default as Pagination } from './Pagination/Pagination'
+export { default as Empty } from './Empty/Empty'
+export { default as SearchButton } from './SearchButton/SearchButton'
+export { default as PersonInfo } from './PersonInfo/PersonInfo'

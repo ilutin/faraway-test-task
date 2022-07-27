@@ -2,8 +2,8 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   alert: null,
-  titleSort: null,
-  searchBy: null,
+  searchString: null,
+  page: 1,
 }
 
 const appReducer = createSlice({
@@ -13,21 +13,14 @@ const appReducer = createSlice({
     setAlert(state, action) {
       state.alert = action.payload
     },
-    setTitleSort(state) {
-      if (state.titleSort && state.titleSort === 'asc') {
-        state.titleSort = 'desc'
-      } else {
-        state.titleSort = 'asc'
-      }
-    },
     setSearch(state, action) {
-      state.searchBy = action.payload
+      state.searchString = action.payload
     },
-    clearToolbar() {
-      return initialState
+    setPage(state, action) {
+      state.page = action.payload
     },
   },
 })
 
-export const { setAlert, setTitleSort, setSearch, clearToolbar } = appReducer.actions
+export const { setAlert, setSearch, setPage } = appReducer.actions
 export default appReducer.reducer

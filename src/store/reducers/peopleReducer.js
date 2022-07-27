@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
   loading: false,
   people: [],
+  total: null,
 }
 
 const peopleReducer = createSlice({
@@ -13,15 +14,19 @@ const peopleReducer = createSlice({
       state.loading = action.payload
     },
     setPeople(state, action) {
-      console.log(action.payload)
-
       return {
         ...state,
-        people: action.payload,
+        people: action.payload.results,
+        total: action.payload.count,
       }
+    },
+    changePersonData(state, action) {
+      const person = state.people.find(item => item.name === action.payload.name)
+
+      person[action.payload.title] = action.payload.value
     },
   },
 })
 
-export const { setPeopleLoading, setPeople } = peopleReducer.actions
+export const { setPeopleLoading, setPeople, changePersonData } = peopleReducer.actions
 export default peopleReducer.reducer

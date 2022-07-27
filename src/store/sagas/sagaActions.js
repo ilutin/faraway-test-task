@@ -1,0 +1,5 @@
+export const sagaActions = {
+  FETCH_PEOPLE: 'FETCH_PEOPLE',
+  SEARCH_PEOPLE: 'SEARCH_PEOPLE',
+  CHANGE_PAGE: 'CHANGE_PAGE',
+}

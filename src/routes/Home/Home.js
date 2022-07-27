@@ -1,10 +1,13 @@
 import React from 'react'
-import { Cards } from 'components'
+import { Cards } from 'components/ui'
+import { Toolbar } from 'components/organisms'
 import { LayoutStyled, HeaderStyled, ContentStyled } from './Home.styles'
 
 const Home = () => (
   <LayoutStyled>
-    <HeaderStyled>Home Header</HeaderStyled>
+    <HeaderStyled>
+      <Toolbar />
+    </HeaderStyled>
     <ContentStyled>
       <Cards />
     </ContentStyled>

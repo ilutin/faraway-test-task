@@ -1,5 +1,23 @@
 import { createGlobalStyle } from 'styled-components'
 
+export const theme = {
+  colors: {
+    white: '#fff',
+    invalid: '#800000',
+    primary: '#576f72',
+    secondary: '#f0ebe3',
+    accent: '#fba1a1',
+    dark: '#2d2d2d',
+  },
+  media: {
+    mobile: '(max-width: 576px)',
+  },
+  gutter: [
+    { xs: 8, sm: 16, md: 24, lg: 40 },
+    { xs: 8, sm: 16, md: 24, lg: 40 },
+  ],
+}
+
 export default createGlobalStyle`
   * {
     padding: 0;
@@ -20,7 +38,7 @@ export default createGlobalStyle`
     font-weight: 400;
     font-size: 14px;
     line-height: 1.4;
-    color: white;
+    color: #fff;
     background-image: url('https://images.unsplash.com/photo-1586861203927-800a5acdcc4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80');
     background-size: cover;
     background-position: center center;
@@ -63,7 +81,6 @@ export default createGlobalStyle`
   }
 
   #root {
-    height: 100vh;
     display: flex;
     flex-direction: column;
   }

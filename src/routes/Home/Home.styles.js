@@ -8,10 +8,14 @@ export const LayoutStyled = styled(Layout)`
 `
 
 export const HeaderStyled = styled(Header)`
-  background: #353941;
-  color: #fff;
+  background-color: transparent;
+  color: ${({ theme }) => theme.colors.white};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
 `
 
 export const ContentStyled = styled(Content)`
-  padding: 10vh 10vw;
+  padding: 4vh 8vw;
 `
